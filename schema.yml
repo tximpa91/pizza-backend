@@ -1,0 +1,14 @@
+info:
+  description: ''
+  title: ''
+  version: ''
+openapi: 3.0.0
+paths:
+  /pizza/:
+    get:
+      description: View to list all Pizzas
+      operationId: pizza_list
+      tags:
+      - pizza
+servers:
+- url: ''
