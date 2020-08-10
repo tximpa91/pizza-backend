@@ -16,7 +16,7 @@ class DefaultDate(models.Model):
 class Topping(DefaultDate):
     topping_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=255)
-    price = models.DecimalField(max_digits=2, decimal_places=2)
+    price = models.DecimalField(max_digits=5, decimal_places=2)
 
 
 class Pizza(DefaultDate):
@@ -24,5 +24,5 @@ class Pizza(DefaultDate):
     name = models.CharField(max_length=255)
     status = models.BooleanField(default=False)
     toppings = models.ManyToManyField(Topping)
-    price = models.DecimalField(max_digits=2, decimal_places=2)
+    price = models.DecimalField(max_digits=5, decimal_places=2)
 
