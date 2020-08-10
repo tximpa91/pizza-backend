@@ -13,12 +13,6 @@ class ToppingSerializer(serializers.ModelSerializer):
 class PizzaSerializer(serializers.ModelSerializer):
     toppings = ToppingSerializer(many=True)
 
-    def to_representation(self, instance):
-        try:
-            data = super().to_representation(instance)
-            return {}
-        except Exception as error:
-            print(str(error))
     class Meta:
         model = Pizza
         fields = ('pizza_id', 'name', 'toppings', 'status')
