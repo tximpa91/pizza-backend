@@ -26,7 +26,7 @@ SECRET_KEY = '5(fk4)w3j4cg5$qugs5(u$5w50ng%c$s=3af&-g&2+%v*$!xb&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+DOCKER = False
 ALLOWED_HOSTS = ['*']
 
 
@@ -86,7 +86,7 @@ DATABASES = {
             'NAME': 'pizza-app',
             'USER': 'postgres',
             'PASSWORD': 'deckpocket',
-            'HOST': 'db',
+            'HOST': 'db' if DOCKER else 'localhost',
             'PORT': '5432',
         }
     }
