@@ -86,7 +86,7 @@ DATABASES = {
             'NAME': 'pizza-app',
             'USER': 'postgres',
             'PASSWORD': 'deckpocket',
-            'HOST': 'localhost',
+            'HOST': 'db',
             'PORT': '5432',
         }
     }
